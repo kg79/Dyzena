@@ -1,12 +1,23 @@
 {
   "name": "dyzena",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kg79/dyzena.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kg79/dyzena/issues"
+  },
+  "homepage": "https://github.com/kg79/dyzena#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }

@@ -1,11 +1,11 @@
-const http = require('http');
-const fs = require('fs');
+const express = require('express');
+const app = express();
 const PORT = process.env.PORT || 3334;
 
-http.Server((req, res) => {
-
-    if (req.url === '/') {
-        res.send()
-    }
-
-}).listen(PORT, () => console.log('localhost:'+ PORT))
+app.get('/', (req, res) => {
+    res.send('dome sweet dome')
+})
+app.get('/favicon.ico', (req, res) => {
+    res.send('my favorite')
+})
+app.listen(PORT, () => console.log('localhost:'+ PORT))
