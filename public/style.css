@@ -1,0 +1,22 @@
+* {
+    background:pink;
+    font-family:sans-serif;
+    color:blue;
+} section {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    margin:4%;
+    background:
+} article {
+    margin:4%;
+    padding:4%;
+    background:purple;
+    color:white;
+    text-align:center;
+} div {
+    background:#ccc;
+    color:black;
+    margin:4%;
+    padding:4%;
+    text-align:right;
+}

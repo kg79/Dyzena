@@ -7,9 +7,9 @@ const path = require('path');
 
 app.use(serveStatic(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => {
-    res.send();
-})
+// app.get('/', (req, res) => {
+//     res.send();
+// })
 app.get('/favicon.ico', (req, res) => {
     res.send('my favorite')
 })
