@@ -7,12 +7,14 @@ const path = require('path');
 
 app.use(serveStatic(path.join(__dirname, 'public')));
 
-// app.get('/', (req, res) => {
-//     res.send();
-// })
+app.get('/keyboard', (req, res) => {
+    res.sendFile(path.join(__dirname + '/keyboard.html'));
+})
+
 app.get('/favicon.ico', (req, res) => {
     res.send('my favorite')
 })
+
 app.listen(PORT, () => console.log('localhost:'+ PORT))
 
 

@@ -6,7 +6,7 @@
     display:grid;
     grid-template-columns:1fr 1fr;
     margin:4%;
-    background:
+    background:yellow;
 } article {
     margin:4%;
     padding:4%;
@@ -19,4 +19,9 @@
     margin:4%;
     padding:4%;
     text-align:right;
+} h1 {
+    font-family:cursive;
+    margin:auto;
+    width:fit-content;
+    color:lime;
 }
