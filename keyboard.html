@@ -3,8 +3,12 @@
   <head>
     <meta charset="utf-8">
     <style>
+@font-face {
+  font-family:cunt;
+  src:url(5th-grade-cursive.regular.ttf)
+}
 * {
-  font-family:cursive;
+  font-family:sans-serif;
   color:green;
   background:blue
 } div {
@@ -17,10 +21,12 @@
   margin:1%;
   background:white;
   text-align:center;
+  padding:2%;
 } h1 {
+    padding-top:1%;
     margin:auto;
     width:fit-content;
-    font-family:cursive;
+    font-family:cunt;
     background:pink;
     text-align:center;
     width:4em;
@@ -98,10 +104,6 @@ const keys = [
   console.log(keys.length)
 const tableCell = document.getElementsByTagName('span');
 
-
-
-
-
   function Music (name, volume, freak, indy, playing){
     this.name = name;
     this.volume = volume;
@@ -118,11 +120,9 @@ const tableCell = document.getElementsByTagName('span');
         this.name.connect(this.volume).connect(atx.destination);
         this.name.start();
         this.playing = true;
-        tableCell[this.indy].innerHTML = `${keys[this.indy].symb}<br/>
-        ${this.indy.toString(10)}<br/>
-        ${keys[this.indy].symb}<br/>
-        ${this.freak.toPrecision(5)}<br/>
-        ${scale[this.indy].toPrecision(3)}`;
+        tableCell[this.indy].innerHTML = `${keys[this.indy].symb}<hr/>
+        ${scale[this.indy].toPrecision(3)}<br/>
+        ${this.freak.toPrecision(5)}`;
         tableCell[this.indy].style.background = '#000';
       }
     }
@@ -199,16 +199,16 @@ let scale = [
 ];
 
 let ROOT = 444, notes = [
-    new Music(name0, volume0, ROOT* eval(scale[0]), 0),
-    new Music(name1, volume1, ROOT* eval(scale[1]), 1),
-    new Music(name2, volume2, ROOT* eval(scale[2]), 2),
-    new Music(name3, volume3, ROOT* eval(scale[3]), 3),
-    new Music(name4, volume4, ROOT* eval(scale[4]), 4),
-    new Music(name5, volume5, ROOT* eval(scale[5]), 5),
-    new Music(name6, volume6, ROOT* eval(scale[6]), 6),
-    new Music(name7, volume7, ROOT* eval(scale[7]), 7),
-    new Music(name8, volume8, ROOT* eval(scale[8]), 8),
-    new Music(name9, volume9, ROOT* eval(scale[9]), 9),
+    new Music(name0,  volume0,  ROOT* eval(scale[ 0]), 0),
+    new Music(name1,  volume1,  ROOT* eval(scale[ 1]), 1),
+    new Music(name2,  volume2,  ROOT* eval(scale[ 2]), 2),
+    new Music(name3,  volume3,  ROOT* eval(scale[ 3]), 3),
+    new Music(name4,  volume4,  ROOT* eval(scale[ 4]), 4),
+    new Music(name5,  volume5,  ROOT* eval(scale[ 5]), 5),
+    new Music(name6,  volume6,  ROOT* eval(scale[ 6]), 6),
+    new Music(name7,  volume7,  ROOT* eval(scale[ 7]), 7),
+    new Music(name8,  volume8,  ROOT* eval(scale[ 8]), 8),
+    new Music(name9,  volume9,  ROOT* eval(scale[ 9]), 9),
     new Music(name10, volume10, ROOT* eval(scale[10]), 10),
     new Music(name11, volume11, ROOT* eval(scale[11]), 11),
     new Music(name12, volume12, ROOT* eval(scale[12]), 12),
@@ -242,11 +242,9 @@ let ROOT = 444, notes = [
 ];
 
 for(let i = 0; i < tableCell.length; i++) {
-  tableCell[i].innerHTML = `${keys[i].symb}<br/>
-        ${i.toString(10)}<br/>
-        ${keys[i].symb}<br/>
-        ${eval(ROOT*scale[i]).toPrecision(5)}<br/>
-        ${scale[i].toPrecision(3)}`;
+  tableCell[i].innerHTML = `${keys[i].symb}<hr/>
+        ${scale[i].toPrecision(3)}
+        ${eval(ROOT*scale[i]).toPrecision(5)}`;
 }
 
 
