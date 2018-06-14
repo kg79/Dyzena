@@ -1,6 +1,6 @@
+
 * {
     background:pink;
-    font-family:sans-serif;
     color:blue;
 } section {
     display:grid;
@@ -19,9 +19,12 @@
     margin:4%;
     padding:4%;
     text-align:right;
-} h1 {
-    font-family:cursive;
+} 
+
+h1 {
+    font-family:'Great Vibes';
     margin:auto;
     width:fit-content;
-    color:lime;
+    color:#333;
+    font-size:270%;
 }
