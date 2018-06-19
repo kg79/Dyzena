@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <script src='http://localhost:3334/music.js'></script>
+  <link rel='stylesheet' href='http://localhost:3334/styley.css'>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>dyzena</h1>
+    <br/>
+    <p>
+    <ul>
+        <% for (let i = 0; i < result.length; i++) { %>
+            <li> <%= result[i].name %> </li>
+            <% } %>
+    </ul>
+    </p>
+
+    <section>
+      <article>
+        <a href='/newStuff'>cool</a>
+      </article>
+    </section>
+<div>
+<% for (let i = 0; i < result.length; i++) { %>
+    <span> <%= result[i].name %> </span>
+<% } %>
+</div>
+  </body> 
+</html>

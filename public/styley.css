@@ -1,0 +1,60 @@
+/* @font-face {
+  font-family:cunt;
+  src:url(../public/5th-grade-cursive.regular.ttf)
+} */
+@import url('https://fonts.googleapis.com/css?family=Pinyon+Script');
+* {
+  font-family:sans-serif;
+  color:green;
+  background:blue
+} div {
+  width:60vw;
+   margin:auto;
+   display: grid;
+  grid-template-columns:auto auto auto auto auto auto auto auto auto auto;
+} span {
+  border:solid yellow 2px;
+  margin:1%;
+  background:white;
+  text-align:center;
+  padding:5%;
+} h1 {
+    margin:auto;
+    width:fit-content;
+    font-family:'Pinyon Script', cursive;
+    background:pink;
+    text-align:center;
+    width:4em;
+    border-radius:12px;
+} em {
+    background:purple;
+    color:white;
+    border-radius:8vh;
+    border:inset 1px #384;
+    padding:.2vh;
+} article {
+    float:right;
+    background:#ccc;
+    width:15vw;
+    text-align:right;
+} br {
+    margin:1%;
+    padding:1%;
+} ul {
+  width:fit-content;
+  float:left;
+  background:gray;
+  color:black;
+} li {
+  background:white;
+  width:fit-content;
+  border:solid pink 1px;
+} a {
+  color:pink;
+  font-family:helvetica;
+} p {
+  float:left;
+  background:#555;
+  color:white;
+  width:10vw;
+}
