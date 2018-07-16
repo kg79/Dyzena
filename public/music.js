@@ -1,21 +1,8 @@
-// const art = document.getElementsByTagName('article');
-
-// let ajax;
-
-// art[0].onclick = () => {
-
-//   ajax = new XMLHttpRequest();
-//   ajax.open('GET', '/newStuff');
-
-//   ajax.onreadystatechange = function() {
-//     if (this.readyState == 4 && this.status == 200) {
-//       console.log(this.responseText)
-//     }
-//   }
-//   ajax.send();
-// }
 
 const tableCell = document.getElementsByTagName('span');
+
+  const me = document.getElementsByTagName('em');
+
     let atx;
     window.onclick = () => atx = new AudioContext()
 
@@ -76,10 +63,9 @@ const keys = [
   ];
 
 
-  function Music (name, volume, freak, indy, playing){
+  function Music (name, volume, indy, playing){
     this.name = name;
     this.volume = volume;
-    this.freak = freak;
     this.indy = indy;
     this.playing = false;
   }
@@ -88,13 +74,13 @@ const keys = [
         this.name = atx.createOscillator();
         this.volume = atx.createGain();
         this.volume.gain.value = 0.333;
-        this.name.frequency.value = this.freak;
+        this.name.frequency.value = me[this.indy].childNodes[0].textContent;
         this.name.connect(this.volume).connect(atx.destination);
         this.name.start();
         this.playing = true;
           tableCell[this.indy].innerHTML = `${keys[this.indy].symb}<hr/>
           ${scale[this.indy].toPrecision(3)}<br/>
-          <em>${this.freak.toPrecision(5)}</em>`;
+          <em>${eval(me[this.indy]).toPrecision(5)}</em>`;
             tableCell[this.indy].style.background = '#000';
       }
     }
@@ -175,46 +161,46 @@ let scale = [
   0.9285714285714286 
 ];
 let notes = [
-    new Music(name0,  volume0,  ROOT* eval(scale[ 0]), 0),
-    new Music(name1,  volume1,  ROOT* eval(scale[ 1]), 1),
-    new Music(name2,  volume2,  ROOT* eval(scale[ 2]), 2),
-    new Music(name3,  volume3,  ROOT* eval(scale[ 3]), 3),
-    new Music(name4,  volume4,  ROOT* eval(scale[ 4]), 4),
-    new Music(name5,  volume5,  ROOT* eval(scale[ 5]), 5),
-    new Music(name6,  volume6,  ROOT* eval(scale[ 6]), 6),
-    new Music(name7,  volume7,  ROOT* eval(scale[ 7]), 7),
-    new Music(name8,  volume8,  ROOT* eval(scale[ 8]), 8),
-    new Music(name9,  volume9,  ROOT* eval(scale[ 9]), 9),
-    new Music(name10, volume10, ROOT* eval(scale[10]), 10),
-    new Music(name11, volume11, ROOT* eval(scale[11]), 11),
-    new Music(name12, volume12, ROOT* eval(scale[12]), 12),
-    new Music(name13, volume13, ROOT* eval(scale[13]), 13),
-    new Music(name14, volume14, ROOT* eval(scale[14]), 14),
-    new Music(name15, volume15, ROOT* eval(scale[15]), 15),
-    new Music(name16, volume16, ROOT* eval(scale[16]), 16),
-    new Music(name17, volume17, ROOT* eval(scale[17]), 17),
-    new Music(name18, volume18, ROOT* eval(scale[18]), 18),
-    new Music(name19, volume19, ROOT* eval(scale[19]), 19),
-    new Music(name20, volume20, ROOT* eval(scale[20]), 20),
-    new Music(name21, volume21, ROOT* eval(scale[21]), 21),
-    new Music(name22, volume22, ROOT* eval(scale[22]), 22),
-    new Music(name23, volume23, ROOT* eval(scale[23]), 23),
-    new Music(name24, volume24, ROOT* eval(scale[24]), 24),
-    new Music(name25, volume25, ROOT* eval(scale[25]), 25),
-    new Music(name26, volume26, ROOT* eval(scale[26]), 26),
-    new Music(name27, volume27, ROOT* eval(scale[27]), 27),
-    new Music(name28, volume28, ROOT* eval(scale[28]), 28),
-    new Music(name29, volume29, ROOT* eval(scale[29]), 29),
-    new Music(name30, volume30, ROOT* eval(scale[30]), 30),
-    new Music(name31, volume31, ROOT* eval(scale[31]), 31),
-    new Music(name32, volume32, ROOT* eval(scale[32]), 32),
-    new Music(name33, volume33, ROOT* eval(scale[33]), 33),
-    new Music(name34, volume34, ROOT* eval(scale[34]), 34),
-    new Music(name35, volume35, ROOT* eval(scale[35]), 35),
-    new Music(name36, volume36, ROOT* eval(scale[36]), 36),
-    new Music(name37, volume37, ROOT* eval(scale[37]), 37),
-    new Music(name38, volume38, ROOT* eval(scale[38]), 38),
-    new Music(name39, volume39, ROOT* eval(scale[39]), 39)
+    new Music(name0,  volume0,  0),
+    new Music(name1,  volume1,  1),
+    new Music(name2,  volume2,  2),
+    new Music(name3,  volume3,  3),
+    new Music(name4,  volume4,  4),
+    new Music(name5,  volume5,  5),
+    new Music(name6,  volume6,  6),
+    new Music(name7,  volume7,  7),
+    new Music(name8,  volume8,  8),
+    new Music(name9,  volume9,  9),
+    new Music(name10, volume10, 10),
+    new Music(name11, volume11, 11),
+    new Music(name12, volume12, 12),
+    new Music(name13, volume13, 13),
+    new Music(name14, volume14, 14),
+    new Music(name15, volume15, 15),
+    new Music(name16, volume16, 16),
+    new Music(name17, volume17, 17),
+    new Music(name18, volume18, 18),
+    new Music(name19, volume19, 19),
+    new Music(name20, volume20, 20),
+    new Music(name21, volume21, 21),
+    new Music(name22, volume22, 22),
+    new Music(name23, volume23, 23),
+    new Music(name24, volume24, 24),
+    new Music(name25, volume25, 25),
+    new Music(name26, volume26, 26),
+    new Music(name27, volume27, 27),
+    new Music(name28, volume28, 28),
+    new Music(name29, volume29, 29),
+    new Music(name30, volume30, 30),
+    new Music(name31, volume31, 31),
+    new Music(name32, volume32, 32),
+    new Music(name33, volume33, 33),
+    new Music(name34, volume34, 34),
+    new Music(name35, volume35, 35),
+    new Music(name36, volume36, 36),
+    new Music(name37, volume37, 37),
+    new Music(name38, volume38, 38),
+    new Music(name39, volume39, 39)
 ];
 
 // for(let i = 0; i < scale.length; i++) {

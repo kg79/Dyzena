@@ -3,6 +3,9 @@
   <script src='http://localhost:3334/music.js'></script>
   <link rel='stylesheet' href='http://localhost:3334/styley.css'>
   <head>
+    <script>
+
+    </script>
     <meta charset="utf-8">
   </head>
   <body>
@@ -11,7 +14,7 @@
     <p>
     <ul>
         <% for (let i = 0; i < result.length; i++) { %>
-            <li> <%= result[i].name %> </li>
+            <li> <%= result[i].fractal %> </li>
             <% } %>
     </ul>
     </p>
@@ -23,8 +26,18 @@
     </section>
 <div>
 <% for (let i = 0; i < result.length; i++) { %>
-    <span> <%= result[i].name %> </span>
-<% } %>
+
+    <span> 
+  <%= result[i].fractal %> 
+    <br>
+    <em>
+<%= eval(444* result[i].fractal).toPrecision(4) %>
+    </em>
+    <br>
+  <%= eval(result[i].fractal).toPrecision(4) %>
+    </span>
+
+  <% } %>
 </div>
   </body> 
 </html>
