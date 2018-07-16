@@ -18,9 +18,7 @@
   "homepage": "https://github.com/kg79/dyzena#readme",
   "description": "yeah",
   "dependencies": {
-    "ejs": "^2.6.1",
     "express": "^4.16.3",
-    "mongodb": "^3.0.10",
     "serve-static": "^1.13.2"
   }
 }
