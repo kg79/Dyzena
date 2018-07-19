@@ -3,6 +3,7 @@
     <html>
         <head>
             <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		    <!-- <script src='./vue.js'></script> -->
             <script src='./oscillate.js'></script>
             <link rel='stylesheet' href='./index.css'>
             <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
@@ -13,6 +14,7 @@
                 <form>
                     root <input v-model='root'placeholder='hz' id='root'><br/>
                     quantity <input v-model='quantity' placeholder='of notes' id='quantity'><br/>
+                    octaves <input v-model='octaves'>
                 </form>
                     <button v-on:click="createHarmonics">get</button>
                     <button v-on:click="bubbleSort">sort</button>
@@ -136,6 +138,19 @@
                         createHarmonics:function() {
                             let numerator = 1, denominator = 1, fractions = [];
 
+                            for (let i = 0; i < this.quantity; i++) {
+                                if (numerator/denominator <= 2) {
+                                    this.chromatic.push({
+                                        dec:numerator/denominator,
+                                        frac:`${numerator}/${denominator}`
+                                    });
+                                }
+                                denominator++;
+                                    if (denominator > numerator) {
+                                        denominator = 1;
+                                        numerator++;
+                                    }
+                            }
                             for (let i = 0; i < this.quantity; i++) {
                                 if (numerator/denominator <= 2) {
                                     this.chromatic.push({
